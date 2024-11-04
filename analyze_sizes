@@ -1,0 +1,16 @@
+#!/bin/bash
+# Функция для анализа размера файлов и директорий
+analyze_sizes () {
+                echo "Размеры файлов и директорий в текущей директории"
+        for item in *; do
+        if [ -e "$item" ]; then
+                size=$(du -s "$item" | cut -f1)
+echo "$size $item"
+ fi
+done 
+}
+# Вызов функции
+analyze_sizes
+
+ 
+
